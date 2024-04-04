@@ -42,21 +42,22 @@ export default function TextForm(props) {
     const[text,setText] = useState("")
   return (
     <>
-    <div className="container">
+    <div className="container" style={{color:props.mode==='dark'?'white':'black'}}>
     <div className="mb-3">
+      <h1>My name is Ghan</h1>
     <label for="myBox" class="form-label">{props.heading}</label>
-    <textarea className="form-control" value={text} onChange={handleOnChange} id="myBox" rows="8"></textarea>
+    <textarea className="form-control" value={text} onChange={handleOnChange} style={{backgroundColor:props.mode==='dark'?'grey':'white',color:props.mode==='dark'?'white':'black'}} id="myBox" rows="8"></textarea>
     </div>
     <button className="btn btn-primary mx-1" onClick={handleupClick}>Convert to UpperCase</button>
     <button className="btn btn-primary mx-1" onClick={handleClearClick}>Clear text</button>
     <button className="btn btn-primary mx-1" onClick={mood}>{btn}</button>
     </div>
-    <div className="container my-5">
+    <div className="container my-5" style={{color:props.mode==='dark'?'white':'black'}}>
         <h1>Your Text Summary</h1>
         <p>{text.split(" ").length}words and {text.length} charachter</p>
         <p>{0.5 * text.split(" ").length} Time required</p>
         <h2>Preview</h2>
-        <p>{text}</p>
+        <p>{text.length>0?text:"Enter somthing in text box to preview here"}</p>
     </div>
     </>
   
