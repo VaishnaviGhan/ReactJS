@@ -8,7 +8,7 @@ export default function About() {
     })
     const[btnText,SetbtnText] = useState('Enable Dark Mode')
     const mood = ()=>{
-       if(myStyle.color == 'white'){
+       if(myStyle.color === 'white'){
         SetmyStyle({
             color : 'black',
             backgroundColor:'white' 

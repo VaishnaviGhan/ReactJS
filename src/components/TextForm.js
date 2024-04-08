@@ -43,7 +43,7 @@ export default function TextForm(props) {
     const[text,setText] = useState("")
   return (
     <>
-    <div className="container" style={{color:props.mode==='dark'?'white':'#203b7a'}}>
+    <div className="container" style={{color:props.mode==='dark'?'white':'grey'}} >
     <div className="mb-3">
       <h1>My name is Ghan</h1>
     <label for="myBox" class="form-label">{props.heading}</label>
@@ -53,7 +53,7 @@ export default function TextForm(props) {
     <button className="btn btn-primary mx-1" onClick={handleClearClick}>Clear text</button>
     <button className="btn btn-primary mx-1" onClick={mood}>{btn}</button>
     </div>
-    <div className="container my-5" style={{color:props.mode==='dark'?'white':'#203b7a'}}>
+    <div className="container my-5" style={{color:props.mode==='dark'?'white':'grey'}}>
         <h1>Your Text Summary</h1>
         <p>{text.split(" ").length}words and {text.length} charachter</p>
         <p>{0.5 * text.split(" ").length} Time required</p>
